@@ -22,7 +22,7 @@ public class Application {
 					+ "8)Generate report for list of Contacts with their name and email id\n"
 					+ "9)Generate report for list of Contacts with their name and mob no\n"
 					+ "10)Generate report for grouping contacts by groupname and\n "
-					+ "  listing in ascending order of the count on the groups)\n"
+					+ "  listing in ascending order of the count on the groups\n"
 					+ "11)Exit");
 			int option = sc.nextInt();
 

@@ -26,20 +26,20 @@ public class UpdateDao implements DataAccess<Contact>{
 	}
 
 	@Override
-	public int addContact(Contact t) {
+	public int addContact(Contact contact) {
 
 		String sql="insert into contacts values(?,?,?,?,?,?,?);";
 		int row=0;
 		
         try(PreparedStatement pstmt=con.prepareStatement(sql)){
 			
-        	pstmt.setString(1, t.getName());
-        	pstmt.setString(2, t.getAddress());
-        	pstmt.setString(3, t.getMobNo());
-        	pstmt.setString(4, t.getProfileRef());
-        	pstmt.setDate(5, Date.valueOf(t.getDateOfBirth()));
-        	pstmt.setString(6, t.getMailId());
-        	pstmt.setString(7, Contact.getToStringGroupName(t.getGroupName()));
+        	pstmt.setString(1, contact.getName());
+        	pstmt.setString(2, contact.getAddress());
+        	pstmt.setString(3, contact.getMobNo());
+        	pstmt.setString(4, contact.getProfileRef());
+        	pstmt.setDate(5, Date.valueOf(contact.getDateOfBirth()));
+        	pstmt.setString(6, contact.getMailId());
+        	pstmt.setString(7, Contact.getToStringGroupName(contact.getGroupName()));
         	
         	
 			row =pstmt.executeUpdate();
@@ -84,20 +84,20 @@ public class UpdateDao implements DataAccess<Contact>{
 	}
 
 	@Override
-	public int update( Contact update,String mobNo) {
+	public int update( Contact contact,String mobNo) {
 		
 
 		int row=0;
 	    	String sql="update contacts set name=?,address=?,mobno=?,profileref=?,dateofbirth=?,mailid=?,groupname=? where mobno=?;";
 	    	try(PreparedStatement pstmt=con.prepareStatement(sql)){
 				
-	        	pstmt.setString(1, update.getName());
-	        	pstmt.setString(2, update.getAddress());
-	        	pstmt.setString(3, update.getMobNo());
-	        	pstmt.setString(4, update.getProfileRef());
-	        	pstmt.setDate(5, Date.valueOf(update.getDateOfBirth()));
-	        	pstmt.setString(6, update.getMailId());
-	        	pstmt.setString(7, Contact.getToStringGroupName(update.getGroupName()));
+	        	pstmt.setString(1, contact.getName());
+	        	pstmt.setString(2, contact.getAddress());
+	        	pstmt.setString(3, contact.getMobNo());
+	        	pstmt.setString(4, contact.getProfileRef());
+	        	pstmt.setDate(5, Date.valueOf(contact.getDateOfBirth()));
+	        	pstmt.setString(6, contact.getMailId());
+	        	pstmt.setString(7, Contact.getToStringGroupName(contact.getGroupName()));
 	        	pstmt.setString(8, mobNo);
 	        	
 	        	
