@@ -137,7 +137,7 @@ public class Service {
 			System.out.println("Enter email id:");
 			email = sc.next();
 			System.out.println(
-					"Enter group option- A)Relative:\n B)Presonal Friend:\n C)Professional Friend:");
+					"Enter group option- A)Relative:\n B)Personal Friend:\n C)Professional Friend:");
 			group = sc.next();
 			group=Contact.getToStringGroupName(group);
 		} catch (ClassCastException | InputMismatchException  e) {

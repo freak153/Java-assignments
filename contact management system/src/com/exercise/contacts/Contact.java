@@ -105,7 +105,7 @@ public class Contact {
 	public static String getToStringGroupName(String group) {
 		if(group.equalsIgnoreCase("A")||group.equalsIgnoreCase("Relative")) {
 			return "Relative";
-		}else if(group.equalsIgnoreCase("B")||group.equalsIgnoreCase("Presonal Friend")) {
+		}else if(group.equalsIgnoreCase("B")||group.equalsIgnoreCase("Personal Friend")) {
 			return"Presonal Friend";
 		}else if(group.equalsIgnoreCase("C")||group.equalsIgnoreCase("Professional Friend")) {
 			return"Professional Friend";
