@@ -150,7 +150,7 @@ public class ReportDao {
 		}
 	}
 
-
+//refactor the method
 	public void nameMobno() {
 		for(Contact contact:list) {
 			System.out.println(contact.getName()+"  :  "+contact.getMobNo());

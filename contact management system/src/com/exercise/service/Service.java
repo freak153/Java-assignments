@@ -14,7 +14,7 @@ import com.exercise.contacts.Contact;
 import com.exercise.dao.ReportDao;
 import com.exercise.dao.UpdateDao;
 
-
+// rename the class from service to inputUtility
 public class Service {
 
 	UpdateDao updateDao;
